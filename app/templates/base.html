@@ -14,13 +14,13 @@
 <body>
 
     <nav>
-        Mailer
+        <a href="{{ url_for('mail.index')}}">Mailer</a> 
         <h3>Jimmy Guerra</h3>
     </nav>
     <section class="content">
         <div class="top-bar">
         <form method="get">
-            <input type="text" name="seach" placeholder="...Quieres Buscar Algo?">
+            <input type="text" name="search" placeholder="...Quieres Buscar Algo?">
         </form>{% block action %}
         <a class="button" href="{{ url_for('mail.create')}}">Nuevo Correo</a>
         {% endblock action %}
