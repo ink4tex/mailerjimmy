@@ -4,9 +4,7 @@
     <h1>{% block title %} Correos Enviados {% endblock title %}</h1>
 {% endblock header %}
 
-{% block action %}
-    <a class="botton" href="#">Nuevo Correo</a>
-{% endblock action %}
+
 
 {% block content %}
 <ul>
@@ -15,7 +13,6 @@
             <div>
                 <span class="email">{{ mail['emial'] }}</span>
                 <span class="subject">{{ mail['subject'] }}</span>
-                <hr>
                 <p class="mail-content">{{ mail['content'] }}</p>
             </div>
         </li>
