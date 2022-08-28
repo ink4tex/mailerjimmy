@@ -1,3 +1,4 @@
+
 from flask import(
     Blueprint, render_template
 )
@@ -10,3 +11,7 @@ def index():
     c.execute("SELECT * FROM email")
     mails = c.fetchall()
     return render_template('mails/index.html', mails = mails)
+
+@bp.route('/create', methods=['GET', 'POST'])
+def create():
+    return render_template('mails/create.html')
